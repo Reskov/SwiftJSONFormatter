@@ -21,7 +21,7 @@ public struct SwiftJSONFormatter {
                     } else {
                         indentLevel += 1
                         formatted.append(newLine)
-                        formatted.append("\(String(repeating: indent, count: indentLevel))")
+                        formatted.append("\(String(repeating: indent, count: max(0, indentLevel)))")
                     }
                 case "}", "]":
                     indentLevel -= 1
